@@ -27,7 +27,8 @@ header h1 {
 /* SIDEBAR */
 
 body {
-   background-color: #e9ecef;
+  /*  background-color: #e9ecef; */
+  background-image: url(/img/fondo.jpg);
 }
 
 .sidenav {
@@ -38,7 +39,7 @@ body {
     top: 0px;
     height: 100%;
     width: 60px;
-    background: rgb(32, 32, 32);
+    background: rgb(51, 51, 51);
 }
 
 .sidenav .nav {
@@ -63,7 +64,7 @@ body {
 .sidenav .icon {
   height: 60px;
   line-height: 60px;
-  background: rgb(32, 32, 32);
+  background: rgb(51, 51, 51);
 }
 
 .sidenav .nav.active .description,
@@ -198,15 +199,24 @@ form p {
 
 .container {
     margin-top: 20px;
-    border: 1px solid black;
+    width: 100%;
     
 }
 
 .col {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
+.row__style {
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgb(51, 51, 51);
+    color: white;
+    
+}
+    
 
 /* FOOTER */
 
