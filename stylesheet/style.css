@@ -32,9 +32,6 @@ header h1 {
 }
 
 .form-container {
-    margin-top: 5%;
-    margin-left: 5%;
-    margin-right: 5%;
     background-color: #ffffff;
     padding: 30px; 
 }
@@ -129,11 +126,25 @@ form p {
 
 .login-container {
     background-color: rgb(255, 255, 255);
-    margin-top: 10%;
     margin-left: 5%;
     margin-right: 5%;
     background-color: #ffffff;
     padding: 20px; 
+    border-radius: 5px;
+}
+
+.h1-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 15px;
+}
+
+.h1-container h1 {
+    color: rgb(83, 212, 195);
+    text-shadow: 2px 2px 2px black;
+    font-size: 50px;
 }
 
 .login-btn {
