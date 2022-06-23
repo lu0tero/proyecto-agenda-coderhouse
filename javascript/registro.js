@@ -5,14 +5,21 @@ const submitButton = document.getElementById("submit-button")
 submitButton.addEventListener("click", registrarUsuario)
 
 
-const usuariosRegistrados = []
+const usuariosRegistrados = [
+    {nombre: "Juan"},
+    {nombre: "Marcelo"},
+    {nombre: "Matias"},
+    {nombre: "Pedro"},
+    {nombre: "Susana"}
+
+]
 
 function capturarUsuario() {
-    let nombre = document.getElementById("nombre").value = "Samuel"
-    let apellido = document.getElementById("apellido").value = "Tocamaiza"
-    let email = document.getElementById("email").value = "samumaiza@gmai.com"
-    let password = document.getElementById("password").value = "cursoJS"
-    let repassword = document.getElementById("repassword").value = "cursoJS"
+    let nombre = document.getElementById("nombre") 
+    let apellido = document.getElementById("apellido") 
+    let email = document.getElementById("email") 
+    let password = document.getElementById("password") 
+    let repassword = document.getElementById("repassword")
 
         console.log(`nombre: ${nombre} \n apellido: ${apellido} \n email: ${email} \n contraseña: ${password} \n contraseña confirmada: ${repassword}`)
 }

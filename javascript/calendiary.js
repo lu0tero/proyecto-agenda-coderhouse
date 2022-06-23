@@ -1,0 +1,1 @@
+let organizadorTareas = new OrganizadorTareas(document.getElementById("tareas-pendientes"), document.getElementById("add-button") )
