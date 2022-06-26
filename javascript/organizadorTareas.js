@@ -1,3 +1,4 @@
+// Creo clase constructora para agregar nota y descripción a la tabla
 class OrganizadorTareas {
     constructor(tareasPendientes, addButon) {
         this.tareasPendientes = tareasPendientes;

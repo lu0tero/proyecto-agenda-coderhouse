@@ -9,6 +9,7 @@ const usuariosRegistrados = [
 
 ]
 
+// Mediante DOM muestro una lista de usuarios ya registrados en el Login.
 function mostrarUsuarios() {
     contenedorUsuarios.appendChild(document.createElement("h3")).innerHTML = "Usuarios registrados"
     usuariosRegistrados.forEach(user => {
