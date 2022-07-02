@@ -33,7 +33,7 @@ header h1 {
 
 .form-container {
     background-color: #ffffff;
-    padding: 30px; 
+    padding: 30px;
 }
 
 .form-register {
@@ -237,6 +237,8 @@ body {
   /* FIN DEL SIDEBAR */
   
 
+/* CALENDIARY */
+
 .container {
     margin-top: 20px;
     width: 100%;
@@ -257,6 +259,10 @@ body {
     
 }
     
+.input-task {
+    border-radius: 5px;
+    width: 100%;
+}
 
 /* FOOTER */
 
