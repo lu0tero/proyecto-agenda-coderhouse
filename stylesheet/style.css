@@ -329,7 +329,7 @@ h3 {
 
 .line-through{
     text-decoration: line-through;
-    color : red;
+    color : rgb(42, 155, 140);
 } 
 
 /* FOOTER */
