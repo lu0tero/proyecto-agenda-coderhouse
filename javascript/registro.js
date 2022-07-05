@@ -1,9 +1,14 @@
 // Registrar usuario y tras darle al botón se pushea al array
 // También aparece el usuario en el HTML con el .value, (Desafío DOM)
-/* 
-const submitButton = document.getElementById("submit-button")
-submitButton.addEventListener("click", registrarUsuario)
-   */
+
+/* const submitButton = document.getElementById("submit-button") */
+
+// Mediante esta función pusheo la función capturarUsuario al array de usuariosRegistrados
+/* submitButton.addEventListener("click", ()=> {
+    usuariosRegistrados.push(new capturarUsuario)
+    localStorage.setItem("Usuario Registrado", usuariosRegistrados)
+})
+ */
 
 // Array de usuarios registrados
   const usuariosRegistrados = [
@@ -21,16 +26,9 @@ submitButton.addEventListener("click", registrarUsuario)
     let apellido = document.getElementById("apellido").value  
     let email = document.getElementById("email").value  
     let password = document.getElementById("password").value  
-    let repassword = document.getElementById("repassword").value 
 
-        console.log(`nombre: ${nombre} \n apellido: ${apellido} \n email: ${email} \n contraseña: ${password} \n contraseña confirmada: ${repassword}`)
+    console.log(`nombre: ${nombre} \n apellido: ${apellido} \n email: ${email} \n contraseña: ${password} \n`)
 }  
-
-// Mediante esta función pusheo la función capturarUsuario al array de usuariosRegistrados
-  function registrarUsuario() {
-      usuariosRegistrados.push(new capturarUsuario)
-      localStorage.setItem("Usuario Registrado", usuariosRegistrados)
-} 
 
 // Formulario de registro
 form.addEventListener("submit", i => {

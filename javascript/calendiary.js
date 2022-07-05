@@ -1,4 +1,29 @@
-// Llamo al constructor y lo guardo en una variable con los parametros ya pasados
-let organizadorTareas = new OrganizadorTareas(document.getElementById("tareas-pendientes"), document.getElementById("add-button") )
+// funcion agregar tarea
+function agregarTarea (tarea) {
+    const elemento =  `
+                        <li id="elemento">
+                            <i class="far fa-circle co" data="realizado" id="0"></i>
+                            <p class="text">${tarea}</p>
+                            <i class="fas fa-trash de" data="eliminado" id="0"></i>
+                        </li>
+                      `
+    lista.insertAdjacentHTML("beforeend", elemento)                      
+}
 
+addButton.addEventListener("click", ()=> {
+    const tarea = input.value;
+    if (tarea) {
+        agregarTarea(tarea)
+    }
+    input.value=""
+})
 
+document.addEventListener("keyup", function(event){
+    if(event.key=="Enter"){
+        const tarea = input.value
+        if(tarea) {
+            agregarTarea(tarea)
+        }
+        input.value = ""
+    }
+})

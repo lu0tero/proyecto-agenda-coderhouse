@@ -1,16 +1,5 @@
-let nuevaTarea = [] 
+const fecha = document.querySelector("#fecha");
+const lista = document.querySelector("#lista");
+const input = document.querySelector("#input");
+const addButton = document.querySelector("#add-button")
 
-// Creo clase constructora para agregar nota y descripción a la tabla
-class OrganizadorTareas {
-    constructor(tareasPendientes, addButon) {
-        this.tareasPendientes = tareasPendientes;
-        this.addButon = addButon;
-        let ref = this;
-        this.addButon.addEventListener("click", ()=> {
-            let tarea = document.createElement("div");
-            tarea.innerHTML = `<input class="input-task"></input>`;
-            ref.tareasPendientes.append(tarea);
-        })
-        
-    }
-}

@@ -239,30 +239,89 @@ body {
 
 /* CALENDIARY */
 
-.container {
-    margin-top: 20px;
-    width: 100%;
-    
+.perfil {
+    display: flex;
+    flex-direction: column;
+    margin-top: 300px;
 }
+/* Agregar tarea */
 
-.col {
+.h3-container {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 40px;
 }
 
-.row__style {
-    padding: 10px;
-    border-radius: 20px;
-    background-color: rgb(51, 51, 51);
-    color: white;
-    
+h3 {
+    color: rgb(51, 51, 51);
 }
-    
-.input-task {
-    border-radius: 5px;
+
+.agregar-tarea {
+    background-color:  rgb(51, 51, 51);
+    border-radius: 15px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 5px;
+    margin: 20px 0;
     width: 100%;
 }
+
+.agregar-tarea input {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: none;
+    background-color: white;
+    padding-left: 10px;
+
+}
+.agregar-tarea input::placeholder {
+   font-size: 1.1rem;
+}
+
+/* Seccion tarea */
+.seccion-tarea h3 {
+    color: rgb(51, 51, 51);
+    margin-bottom: 20px;
+    margin-top: 25px;
+}
+
+.tareas-pendientes {
+    display: flex;
+    justify-content: center;
+}
+
+.seccion-tarea li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(51, 51, 51);
+    border-radius: 15px;
+    padding: 10px;
+    color: white;
+    margin: 5px 0;
+}
+.seccion-tarea i {
+    font-size: 25px;
+}
+
+.seccion-tarea > ul p {
+    font-size: 1.2rem;
+}
+
+
+.seccion-tarea i:hover {
+    color: rgb(42, 155, 140);
+    cursor: pointer;
+}
+
+.line-through{
+    text-decoration: line-through;
+    color : red;
+} 
 
 /* FOOTER */
 
