@@ -1,10 +1,16 @@
 // funcion agregar tarea
-function agregarTarea (tarea) {
+function agregarTarea (tarea, id, realizado, eliminado) {
+
+    if(eliminado){return}
+
+    const REALIZADO = realizado ? check : uncheck;
+    const LINE = realizado ? lineThrough : "";
+
     const elemento =  `
                         <li id="elemento">
-                            <i class="far fa-circle co" data="realizado" id="0"></i>
+                            <i class="far ${REALIZADO} " data="realizado" id="${id}"></i>
                             <p class="text">${tarea}</p>
-                            <i class="fas fa-trash de" data="eliminado" id="0"></i>
+                            <i class="fas fa-trash de" data="eliminado" id="${id}"></i>
                         </li>
                       `
     lista.insertAdjacentHTML("beforeend", elemento)                      
@@ -13,9 +19,17 @@ function agregarTarea (tarea) {
 addButton.addEventListener("click", ()=> {
     const tarea = input.value;
     if (tarea) {
-        agregarTarea(tarea)
+        agregarTarea(tarea, id, false, false)
+        LIST.push({
+            nombre: tarea,
+            id: id,
+            realizado: false,
+            eliminado: false
+        })
     }
+    localStorage.setItem("Todo", JSON.stringify(LIST))
     input.value=""
+    id++
 })
 
 document.addEventListener("keyup", function(event){
@@ -23,7 +37,60 @@ document.addEventListener("keyup", function(event){
         const tarea = input.value
         if(tarea) {
             agregarTarea(tarea)
+            LIST.push({
+                nombre: tarea,
+                id: id,
+                realizado: false,
+                eliminado: false
+            })
         }
+        localStorage.setItem("Todo", JSON.stringify(LIST))
         input.value = ""
+        id++
     }
 })
+
+lista.addEventListener("click", function (event){
+    const element = event.target
+    const elementData = element.attributes.data.value
+    if(elementData==="realizado"){
+        tareaRealizada(element)
+    } else if (elementData === "eliminado"){ 
+            tareaEliminada(element)
+        }
+    localStorage.setItem("TODO", JSON.stringify(LIST))
+})
+
+// Funcion de tarea realizada
+
+function tareaRealizada(element){
+    element.classList.toggle(check)
+    element.classList.toggle(uncheck)
+    element.parentNode.querySelector(".text").classList.toggle(lineThrough)
+    LIST(element.id).realizado = LIST(element.id).realizado ? false : true
+}
+
+
+// Funcion de tarea eliminada
+function tareaEliminada(element){
+    element.parentNode.parentNode.removeChild(element.parentNode)
+    LIST(element.id).eliminado = true
+}
+
+
+// localStorage getItem 
+let data = localStorage.getItem("TODO")
+if (data){
+    LIST = JSON.parse(data)
+    id = LIST.length
+    cargarLista(LIST)
+} else {
+    LIST = []
+    id = 0
+}
+
+function cargarLista(DATA) {
+    DATA.forEach(function(i){
+        agregarTarea(i.nombre, i.id, i.realizado, i.eliminado)
+    })
+}
