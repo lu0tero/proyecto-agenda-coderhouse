@@ -3,22 +3,22 @@ function agregarTarea (tarea, id, realizado, eliminado) {
 
     if(eliminado){return}
 
-    const REALIZADO = realizado ? check : uncheck;
-    const LINE = realizado ? lineThrough : "";
+    const REALIZADO = realizado ? check : uncheck
+    const LINE = realizado ? lineThrough : ""
 
-    const elemento =  `
+    const elemento =   `
                         <li id="elemento">
-                            <i class="far ${REALIZADO} " data="realizado" id="${id}"></i>
-                            <p class="text">${tarea}</p>
-                            <i class="fas fa-trash de" data="eliminado" id="${id}"></i>
+                        <i class="far ${REALIZADO}" data="realizado" id="${id}"></i>
+                        <p class="text ${LINE}">${tarea}</p>
+                        <i class="fas fa-trash de" data="eliminado" id="${id}"></i>
                         </li>
-                      `
-    lista.insertAdjacentHTML("beforeend", elemento)                      
+                        `
+    lista.insertAdjacentHTML("beforeend", elemento)                        
 }
 
 addButton.addEventListener("click", ()=> {
     const tarea = input.value;
-    if (tarea) {
+    if(tarea) {
         agregarTarea(tarea, id, false, false)
         LIST.push({
             nombre: tarea,
@@ -27,16 +27,16 @@ addButton.addEventListener("click", ()=> {
             eliminado: false
         })
     }
-    localStorage.setItem("Todo", JSON.stringify(LIST))
+    localStorage.setItem("TODO", JSON.stringify(LIST))
     input.value=""
     id++
 })
 
 document.addEventListener("keyup", function(event){
     if(event.key=="Enter"){
-        const tarea = input.value
+        const tarea = input.value 
         if(tarea) {
-            agregarTarea(tarea)
+            agregarTarea(tarea, id, false, false)
             LIST.push({
                 nombre: tarea,
                 id: id,
@@ -44,8 +44,8 @@ document.addEventListener("keyup", function(event){
                 eliminado: false
             })
         }
-        localStorage.setItem("Todo", JSON.stringify(LIST))
-        input.value = ""
+        localStorage.setItem("TODO", JSON.stringify(LIST))
+        input.value =""
         id++
     }
 })
