@@ -13,7 +13,7 @@ header {
     display: flex;
     justify-content: center;
     text-align: center;
-    background-color: rgb(42, 155, 140);
+    background-color: 34e89e;
     padding: 10px;
 }
 
@@ -168,8 +168,8 @@ form p {
 /* SIDEBAR */
 
 body {
-    /*  background-color: #e9ecef; */
-    background-image: url(/img/fondo.jpg);
+    background: linear-gradient(#28c684, #0f3443);
+    height: 100vh;
   }
   
   .sidenav {
@@ -243,6 +243,7 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 300px;
+    color: rgba(255, 255, 255, 0.879);
 }
 /* Agregar tarea */
 
@@ -254,14 +255,15 @@ body {
 }
 
 h3 {
-    color: rgb(51, 51, 51);
+    color: rgba(255, 255, 255, 0.879);
 }
 
 .agregar-tarea {
     background-color:  rgb(51, 51, 51);
     border-radius: 15px;
-    height: 70px;
+    height: 60px;
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 20px;
     padding: 5px;
@@ -274,17 +276,19 @@ h3 {
     height: 100%;
     border-radius: 8px;
     border: none;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0);
     padding-left: 10px;
+    color: rgba(255, 255, 255, 0.879);
 
 }
 .agregar-tarea input::placeholder {
    font-size: 1.1rem;
+   color: rgba(255, 255, 255, 0.879);
 }
 
 /* Seccion tarea */
 .seccion-tarea h3 {
-    color: rgb(51, 51, 51);
+    color: rgba(255, 255, 255, 0.879);
     margin-bottom: 20px;
     margin-top: 25px;
 }
@@ -303,9 +307,14 @@ h3 {
     padding: 10px;
     color: white;
     margin: 5px 0;
+
 }
 .seccion-tarea i {
     font-size: 25px;
+}
+
+#lista {
+    padding-left: 0;
 }
 
 .seccion-tarea > ul p {
@@ -329,7 +338,7 @@ footer {
     position: absolute;
     z-index: -1;
     bottom: 0;
-    background-color: rgb(42, 155, 140);
+    background-color: 0f3443;
     width: 100%;
 }
 
