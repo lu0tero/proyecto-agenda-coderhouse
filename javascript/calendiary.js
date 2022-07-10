@@ -94,3 +94,4 @@ function cargarLista(DATA) {
         agregarTarea(i.nombre, i.id, i.realizado, i.eliminado)
     })
 }
+

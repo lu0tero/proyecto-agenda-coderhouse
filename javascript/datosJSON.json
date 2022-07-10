@@ -1,0 +1,19 @@
+[
+    {
+        "nombre": "Juan",
+        "email": "juan1@gmail.com",
+        "tarea": "Sacar la basura"
+    },
+
+    {
+        "nombre": "Susana",
+        "email": "susana321@gmail.com",
+        "tarea": "Realizar desafío coder"
+    },
+
+    {
+        "nombre": "Mateo",
+        "email": "juan1@gmail.com",
+        "tarea": "Sacar la basura"
+    }
+]
