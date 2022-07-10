@@ -12,3 +12,5 @@ const obtengoUsuario = (URL)=> {
     contenedorUsuarios.innerHTML = retornoUsuarioError()
     })
 }
+
+obtengoUsuario(URL)
