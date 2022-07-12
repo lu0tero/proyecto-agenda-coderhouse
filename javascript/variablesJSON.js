@@ -1,6 +1,6 @@
 const URL = `/javascript/datosJSON.json`
 
 let usuariosMostrar = ""
-const usuariosGuardados = []
+let usuariosGuardados = []
 
 const contenedorUsuarios = document.getElementById("contenedor-usuarios")

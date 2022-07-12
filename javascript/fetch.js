@@ -1,6 +1,6 @@
 const obtengoUsuario = (URL)=> {
     fetch(URL)
-    .then((response)=> response.json() )
+    .then((response)=> response.json())
     .then((data)=> { 
           usuariosGuardados = data
           usuariosGuardados.forEach(contenido => {
@@ -13,4 +13,4 @@ const obtengoUsuario = (URL)=> {
     })
 }
 
-obtengoUsuario(URL)
+obtengoUsuario("/javascript/datosJSON.json")
