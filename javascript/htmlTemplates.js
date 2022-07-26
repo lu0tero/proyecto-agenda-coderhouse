@@ -1,11 +1,11 @@
 const retornoUsuarios = (contenido) => {
-    const {nombre, email, tarea} = contenido
+    const {fecha, estado, recordatorio} = contenido
         let htmlCard = ""
             htmlCard += `<div class="card" style="width: 18rem;">
                             <div class="card-body">
-                                <h5 class="card-title">${nombre}</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">${email}</h6>
-                                <p class="card-text">${tarea}</p>
+                            <i class="fa-solid fa-bell"></i><h5 class="card-title">${fecha}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">${estado}</h6>
+                                <p class="card-text">${recordatorio}</p>
                             </div>
                         </div>  `
         return htmlCard

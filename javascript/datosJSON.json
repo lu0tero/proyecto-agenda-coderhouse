@@ -1,19 +1,19 @@
 [
     {
-        "nombre": "Juan",
-        "email": "juan1@gmail.com",
-        "tarea": "Sacar la basura"
+        "fecha": "29/08/22",
+        "estado": "Pendiente",
+        "recordatorio": "Entregar proyecto final"
     },
 
     {
-        "nombre": "Susana",
-        "email": "susana321@gmail.com",
-        "tarea": "Realizar desafío coder"
+        "fecha": "16/08/22",
+        "estado": "Pendiente",
+        "recordatorio": "Comienza clase de React"
     },
 
     {
-        "nombre": "Mateo",
-        "email": "juan1@gmail.com",
-        "tarea": "Comprar regalo"
+        "fecha": "15/09/22",
+        "estado": "Pendiente",
+        "recordatorio": "Cumpleaños de mi abuela"
     }
 ]
