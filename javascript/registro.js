@@ -94,7 +94,7 @@ form.addEventListener("submit", i => {
 // Botón de registro
 submitButton.addEventListener('click', ()=> {
     (nombre.value !== "" && apellido.value !== "" && email.value !== "" && password.value !== "") ? (
-        location.href = "/pages/calendiary.html"
+        location.href = "pages/calendiary.html"
     ) : (
         Swal.fire({
             title: "Termine de rellenar todos los espacios",

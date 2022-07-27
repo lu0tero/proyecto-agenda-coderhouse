@@ -13,4 +13,4 @@ const obtengoUsuario = (URL)=> {
     })
 }
 
-obtengoUsuario("/javascript/datosJSON.json")
+obtengoUsuario("/javascript/datosJSON.json");
