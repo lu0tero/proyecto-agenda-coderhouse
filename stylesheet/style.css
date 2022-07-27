@@ -157,6 +157,10 @@ form p {
     font-size: 50px;
 }
 
+.h1-container .log-h1 {
+    color: whitesmoke;
+}
+
 .login-btn {
     background-color: rgb(140, 218, 190);
     border-radius: 5px;
@@ -171,14 +175,6 @@ form p {
 .login-btn:hover {
     cursor: pointer;
     background-color: rgb(0, 97, 76);
-}
-
-#contenedor-usuarios {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin-top: 20px;
 }
 
 /* CALENDARIO */
@@ -354,6 +350,43 @@ h3 {
     color : rgb(42, 155, 140);
 } 
 
+/* RECORDATORIOS */
+
+#contenedor-usuarios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 55px;
+}
+
+.card {
+    transition: 0.1s ease-in;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.log-out {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 15px;
+    font-size: 25px;
+    color: rgba(255, 255, 255, 0.906);
+}
+
+.log-out a {
+    color: rgba(255, 255, 255, 0.906);
+}
+
+.log-out a:hover {
+    color: rgb(94, 94, 94);
+}
+
 /* FOOTER */
 
 footer {
@@ -471,6 +504,18 @@ footer h2 {
     .col {
         flex: none;
     }
+
+    /* RECORDATORIO */
+
+    .log-out {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 15px;
+        font-size: 25px;
+        color: rgba(255, 255, 255, 0.906);
+    }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 768px) {
@@ -555,6 +600,19 @@ footer h2 {
 
     .col {
         flex: none;
+    }
+
+     /* RECORDATORIO */
+
+     .log-out {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 15px;
+        font-size: 25px;
+        color: rgba(255, 255, 255, 0.906);
+        text-decoration: none;
     }
 
 }
