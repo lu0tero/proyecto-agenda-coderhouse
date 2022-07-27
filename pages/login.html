@@ -11,10 +11,8 @@
     <!-- Sweet Alert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- JS LINK -->
-    <script defer src="/javascript/variablesJSON.js"></script>
-    <script defer src="/javascript/datosJSON.json"></script>
-    <script defer src="/javascript/htmlTemplates.js"></script>
-    <script defer src="/javascript/fetch.js"></script>
+    <script defer src="/javascript/variablesRegistro.js"></script>
+    <script defer src="/javascript/login.js"></script>
     <!-- CSS LINK -->
     <link rel="stylesheet" href="../stylesheet/style.css">
     <!-- FONTAWESOME -->
@@ -43,11 +41,11 @@
                 </div>
             </div>
             <label class="label-form" for="email">Correo electronico <span class="text-danger">*</span></label>
-            <input  class="input-form" type="email" name="email" id="email">
+            <input  class="input-form" type="email" name="email" id="login-email">
             <label class="label-form" for="password">Contraseña <span class="text-danger">*</span></label>
-            <input class="input-form"  type="password" name="password" id="password">  
+            <input class="input-form"  type="password" name="password" id="login-password">  
             <p>¿Sin cuenta? <a href="../index.html">Registrate acá</a></p>
-            <a href="calendiary.html"><button id="login-button" type="button" class="login-btn">Ingresar a CalenDiary</button></a>
+            <button id="login-button" type="button" class="login-btn">Ingresar a CalenDiary</button>
         </form>
     </main>
 </body>
