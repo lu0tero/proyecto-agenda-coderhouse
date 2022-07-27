@@ -1,24 +1,3 @@
-// Registrar usuario y tras darle al botón se pushea al array
-// También aparece el usuario en el HTML con el .value, (Desafío DOM)
-
-/* const submitButton = document.getElementById("submit-button") */
-
-// Mediante esta función pusheo la función capturarUsuario al array de usuariosRegistrados
-/* submitButton.addEventListener("click", ()=> {
-    usuariosRegistrados.push(new capturarUsuario)
-    localStorage.setItem("Usuario Registrado", usuariosRegistrados)
-})
- */
-
-// Array de usuarios registrados
-  const usuariosRegistrados = [
-    {nombre: "Juan"},
-    {nombre: "Marcelo"},
-    {nombre: "Matias"},
-    {nombre: "Pedro"},
-    {nombre: "Susana"}
-
-]  
 
 // Creo una función para obtener los valores del registro 
  function capturarUsuario() {
@@ -84,7 +63,7 @@ form.addEventListener("submit", i => {
         validar = true
     ) : (
         Swal.fire({
-            title: `No se ha ingresado una contraseña`,
+            title: `Ingrese una contraseña valida`,
             icon: "error",
             toast: true,
             position: "top-end",
@@ -109,4 +88,21 @@ form.addEventListener("submit", i => {
     if (validar) {
         alertasFormulario.innerHTML = alert
     }
+
 })
+
+// Botón de registro
+submitButton.addEventListener('click', ()=> {
+    (nombre.value !== "" && apellido.value !== "" && email.value !== "" && password.value !== "") ? (
+        location.href = "/pages/calendiary.html"
+    ) : (
+        Swal.fire({
+            title: "Termine de rellenar todos los espacios",
+            icon: "error",
+            timer: 3000,
+            toast: true,
+            position: "top-end"
+        })
+    )
+})
+
